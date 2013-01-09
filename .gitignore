@@ -1,0 +1,68 @@
+# First, ignore everything.
+*
+
+# Let's not ignore ourselves.
+!.gitignore
+
+# CONFIG WHITELIST
+
+# git
+!.gitconfig
+
+# i3
+!.i3/
+!.i3/config
+!.i3status.conf
+# lol backgrounds
+!.i3/bg.png
+!.i3/lockbg.png
+
+# feh
+!.fehbg
+
+# ncmpcpp
+!.ncmpcpp/
+!.ncmpcpp/config
+
+# pentadactyl
+!.pentadactylrc
+
+# tmux
+!.tmux.conf
+
+# vim
+!.vimrc
+!.gvimrc
+
+!.vim/
+!.vim/*
+!.vim/**/*
+# not including all the bundles. Instead, there's a small script that can be 
+# executed to download and install all bundles.
+.vim/bundle
+# no swap files either
+.vim/swp
+
+# X11
+!.xinitrc
+!.xinputrc
+!.Xdefaults
+!.Xmodmap
+
+# zsh
+!.zshrc
+!.zshenv
+!.zlogin
+
+!.zsh/
+!.zsh/*
+
+
+# misc configs
+!.config/
+
+!.config/dunst/
+!.config/dunst/*
+
+!.config/meat/
+!.config/meat/*

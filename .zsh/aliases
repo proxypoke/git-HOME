@@ -1,0 +1,58 @@
+#general
+alias x='exec nohup startx'
+alias o='xdg-open'
+alias v='vim -p'
+alias g='git'
+alias t='urxvt -cd $PWD &>/dev/null &; disown'
+alias f='ffbeta'
+alias s='sudo'
+alias untar='tar xfv'
+alias ytdl='youtube-dl -t'
+
+# ls
+alias l='ll'
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -A --color=auto'
+
+# rsync
+alias r='rsync -avzP'
+alias cp='rsync -azq'
+
+# grep
+alias grep='grep --color'
+alias ack="/usr/bin/vendor_perl/ack"
+
+# mount
+alias mnt='mount'
+alias umnt='umount'
+
+#alias mame='sdlmame -rp .'
+
+# pacman aliases
+alias pS='pacman_install_rehash'
+alias pss='pacman -Ss'
+
+alias pq='pacman -Q'
+alias pqq='pacman -Qq'
+alias pql='pacman -Ql'
+alias pqi='pacman -Qi'
+alias pqo='pacman -Qo'
+
+alias pR='pacman -R'
+alias prs='pacman -Rs'
+
+#c aliases
+alias cc="gcc -Wall -Wshadow -Wextra --std=c99 -Werror"
+
+#python aliases
+alias py='python'
+alias bpy='bpython'
+alias ipy='ipython'
+
+alias py2='python2.7'
+alias bpy2='bpython2'
+alias ipy2='clear && ipython2'
+
+alias nt="nosetests3"
+alias nt2="nosetests2"

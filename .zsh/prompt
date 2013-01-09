@@ -1,0 +1,69 @@
+color () {
+	echo "%B%(!.%F{red}.%F{blue})$*%f%b"
+}
+
+update_git_prompt () {
+	GIT_PROMPT=""
+	if [ -n "$(git_branch)" ]; then
+		GIT_PROMPT=$(color " - [")
+		GIT_PROMPT+="%F{yellow}"
+		GIT_PROMPT+=$(git_branch)
+		GIT_PROMPT+="%F"
+		GIT_PROMPT+=$(color "]")
+	fi
+	echo $GIT_PROMPT
+	return 0
+}
+
+update_venv_prompt () {
+	VENV_PROMPT=""
+	if [ -n "$(get_virtualenv)" ]; then
+		VENV_PROMPT=$(color " - [")
+		VENV_PROMPT+="%F{red}"
+		VENV_PROMPT+="$(get_virtualenv)"
+		VENV_PROMPT+="%F"
+		VENV_PROMPT+=$(color "]")
+	fi
+	echo $VENV_PROMPT
+	return 0
+}
+
+# First line
+#
+# a bell
+PROMPT=$'\a'
+PROMPT+=$(color '┌─[')
+# username
+#PROMPT+='%B%F{green}%n%f%b'
+# the @
+#PROMPT+='%F{magenta}@%f'
+# hostname
+PROMPT+='%F{blue}%m%f'
+
+PROMPT+=$(color ']')
+PROMPT+=' - '
+PROMPT+=$(color '[')
+
+# working directory
+PROMPT+='%B%F{white}%~%f%b'
+
+PROMPT+=$(color ']')
+
+# dynamic extra prompts
+PROMPT+='$(update_git_prompt)'
+PROMPT+='$(update_venv_prompt)'
+
+
+# Second line
+#
+PROMPT+=$'\n'
+PROMPT+=$(color '└─[')
+# change the prompt character
+#PROMPT+='%F{mag}%(!.#.$)%f'
+PROMPT+=$'%(0?.$.%F{red}%?%F)'
+PROMPT+=$(color ']> ')
+
+# Right prompt
+#
+# display the current vi mode
+#RPROMPT="${VIMODE}"

@@ -1,0 +1,53 @@
+# vim: set ft=zsh
+
+set_urxvt_title () {
+	 print -Pn "\e]0;$*\a"
+}
+
+# get the current git branch
+git_branch () {
+	git symbolic-ref HEAD --short 2>/dev/null
+	return 0
+}
+
+# get the current virtualenv
+get_virtualenv () {
+	if [ -n "${VIRTUAL_ENV}" ]; then
+		basename $VIRTUAL_ENV
+	fi
+	return 0
+}
+
+# pacman utility functions
+
+pacman_install_rehash () {
+	sudo pacman -S $*
+	rehash
+}
+
+preexec () {
+	case "$TERM" in
+		screen*)
+			# set tmux' title to the currently running program
+			print -Pn "\033k$1\033\\"
+			;;
+		linux)
+			# this is a tty, don't do anything.
+			;;
+		*)
+			# set urxvt's title. format:
+			# [user@host pwd] currently_running_program
+			print -Pn "\e]0;[%n@%m %~] $1 - urxvt\a"
+			;;
+	esac
+}
+
+precmd () {
+}
+
+
+function zle-keymap-select {
+    VIMODE="${${KEYMAP/vicmd/ COMMAND}/(main|viins)/}"
+    zle reset-prompt
+}
+zle -N zle-keymap-select
