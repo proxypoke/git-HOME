@@ -6,6 +6,7 @@ alias g='git'
 alias t='urxvt -cd $PWD &>/dev/null &; disown'
 alias f='ffbeta'
 alias s='sudo'
+alias sv='sudo -e'
 alias untar='tar xfv'
 alias ytdl='youtube-dl -t'
 
