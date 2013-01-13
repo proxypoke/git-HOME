@@ -22,6 +22,7 @@ alias cp='rsync -azq'
 
 # grep
 alias grep='grep --color'
+alias krebs='grep' # lol RZL
 alias ack="/usr/bin/vendor_perl/ack"
 
 # mount
