@@ -17,7 +17,7 @@ alias ll='ls -l --color=auto'
 alias la='ls -A --color=auto'
 
 # rsync
-alias r='rsync -avzP'
+alias r='rsync -avzPFF'
 alias cp='rsync -azq'
 
 # grep
