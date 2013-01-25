@@ -35,6 +35,7 @@ noremap <F4> :set number! number?<CR>
 noremap <F5> :set hlsearch! hlsearch?<CR>
 
 " 8 space tabs are bad and you should feel bad if you use them
+set expandtab
 set tabstop=4
 set shiftwidth=4
 
