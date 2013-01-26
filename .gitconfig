@@ -25,3 +25,5 @@
 	a = add
 	p = push -u origin master
 	d = diff
+    m = merge --no-ff
+    cp = cherry-pick
