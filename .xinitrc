@@ -4,6 +4,9 @@ urxvtd -q -o -f
 # xinput
 source "$HOME/.xinputrc"
 
+# xrandr
+source "$HOME/.xrandrrc" &
+
 # no beep
 xset -b
 
