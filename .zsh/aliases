@@ -8,7 +8,7 @@ alias f='ffbeta'
 alias s='sudo'
 alias sv='sudo -e'
 alias untar='tar xfv'
-alias ytdl='youtube-dl -t'
+alias ytdl='youtube-dl -t --prefer-free-formats'
 
 # ls
 alias l='ll'
