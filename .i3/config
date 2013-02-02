@@ -148,6 +148,8 @@ bar {
 			# class				border	backgr.	text
 			#focused_workspace	#4c7899 #00AA00 #ffffff
 		}
+
+        font pango:Terminus 8
 }
 
 # colors
@@ -155,6 +157,9 @@ bar {
 #client.focused			#4c7899 #00AA00 #000000 #00FF00
 #client.focused_inactive	#333333 #335533 #000000	#449944
 #client.unfocused		#333333	#222222	#00AA00 #00FF00
+
+# fonts
+font pango:Terminus 8
 
 # border style
 new_window 1pixel
@@ -166,7 +171,7 @@ focus_follows_mouse no
 # Assignments
 assign [window_role="browser"] 1
 assign [class="Smplayer2"] 5
-assign [class="claws-mail"] 7
+assign [class="Claws-mail"] 7
 
 # stuff
 workspace_auto_back_and_forth yes
