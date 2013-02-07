@@ -6,7 +6,7 @@ setlocal autoindent
 let g:python="python2"
 let g:pydoc="pydoc2"
 let g:pymode_rope_always_show_complete_menu = 1
-let g:pymode_lint_checker = 'pylint,pep8,mccabe'
+let g:pymode_lint_checker = 'pyflakes,pep8,mccabe'
 
 " why the fuck does this get unset?
 set fo+=t
