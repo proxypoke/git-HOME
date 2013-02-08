@@ -44,7 +44,7 @@ set tw=80
 set colorcolumn=81
 " global format options. ftplugin files should only += these.
 " NOTE: manual formatting can be achieved with 'gq'
-set formatoptions=tcroqwanlj
+set formatoptions=tcroqnlj
 
 " mouse? in my vim? I don't think so.
 set mouse=
