@@ -12,7 +12,8 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:Terminus 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -157,9 +158,6 @@ bar {
 #client.focused			#4c7899 #00AA00 #000000 #00FF00
 #client.focused_inactive	#333333 #335533 #000000	#449944
 #client.unfocused		#333333	#222222	#00AA00 #00FF00
-
-# fonts
-font pango:Terminus 8
 
 # border style
 new_window 1pixel
