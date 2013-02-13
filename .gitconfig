@@ -27,3 +27,4 @@
 	d = diff
     m = merge --no-ff
     cp = cherry-pick
+    task = !git-task
