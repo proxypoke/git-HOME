@@ -16,7 +16,7 @@ syntax on
 colorscheme kosmos
 set cursorline
 "set cursorcolumn
-set number
+set relativenumber
 set hlsearch
 
 " ScreenShell settings
@@ -68,4 +68,3 @@ set wildignore=*.o,*a,*.py[oc]
 
 " When .vimrc is edited, automatically reload it (stolen from eeemsi)
 autocmd! bufwritepost .vimrc source ~/.vimrc
-
