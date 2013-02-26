@@ -10,14 +10,13 @@ source ~/.zsh/functions
 #echo "Functions loaded."
 source ~/.zsh/startup
 #echo "Startup loaded."
+source ~/.zsh/history
+#echo "History loaded."
 
 autoload -Uz compinit
 compinit
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 setopt autocd extendedglob notify
 unsetopt beep
 bindkey -v
