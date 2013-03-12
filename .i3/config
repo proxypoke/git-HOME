@@ -170,6 +170,7 @@ focus_follows_mouse no
 assign [window_role="browser"] 1
 assign [class="Smplayer2"] 5
 assign [class="Claws-mail"] 7
+assign [title="bin/irc"] 6
 
 # stuff
 workspace_auto_back_and_forth yes
@@ -192,3 +193,8 @@ bindsym $mod+x move workspace to output right
 for_window [class="Neo_layout_viewer"] floating enable
 
 bindcode 160 exec ~/bin/screenlock
+
+# autostart
+exec firefox
+exec claws-mail
+exec lilyterm -e "irc"
