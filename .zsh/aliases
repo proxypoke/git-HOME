@@ -2,6 +2,7 @@
 alias x='exec nohup startx'
 alias o='xdg-open'
 alias v='vim -p'
+alias e='emacs -nw'
 alias g='git'
 alias t='urxvt -cd $PWD &>/dev/null &; disown'
 alias f='ffbeta'
@@ -9,6 +10,12 @@ alias s='sudo'
 alias sv='sudo -e'
 alias untar='tar xfv'
 alias ytdl='youtube-dl -t --prefer-free-formats'
+
+# file system usage
+alias fsu="di -f mpf"
+
+# notmuch
+alias notmuch="mosh shion -- tmux attach -t notmuch"
 
 # ls
 alias l='ll'
@@ -24,6 +31,7 @@ alias cp='rsync -azq'
 alias grep='grep --color'
 alias krebs='grep' # lol RZL
 alias ack="/usr/bin/vendor_perl/ack"
+alias gr='grep'
 
 # mount
 alias mnt='mount'
