@@ -13,9 +13,6 @@
 !.i3/
 !.i3/config
 !.i3status.conf
-# lol backgrounds
-!.i3/bg.png
-!.i3/lockbg.png
 
 # feh
 !.fehbg
