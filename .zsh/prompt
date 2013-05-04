@@ -1,3 +1,6 @@
+# Turn the prompt system off:
+#prompt off
+
 color () {
 	echo "%B%(!.%F{red}.%F{blue})$*%f%b"
 }
@@ -50,8 +53,8 @@ PROMPT+='%B%F{white}%~%f%b'
 PROMPT+=$(color ']')
 
 # dynamic extra prompts
-PROMPT+='$(update_git_prompt)'
-PROMPT+='$(update_venv_prompt)'
+#PROMPT+='$(update_git_prompt)'
+#PROMPT+='$(update_venv_prompt)'
 
 
 # Second line
