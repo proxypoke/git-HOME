@@ -1,7 +1,37 @@
 # vim: set ft=zsh
 
-set_urxvt_title () {
-	 print -Pn "\e]0;$*\a"
+# Functions for cwd-spawn
+
+cwd_to_urxvt() {
+    local update="\0033]777;cwd-spawn;path;$PWD\0007"
+
+        case $TERM in
+        screen*)
+# pass through to parent terminal emulator
+        update="\0033P$update\0033\\";;
+    esac
+
+        echo -ne "$update"
+}
+
+ssh_connection_to_urxvt() {
+    # don't propagate information to urxvt if ssh is used non-interactive
+    [ -t 0 ] || [ -t 1 ] || return
+
+    local update="\0033]777;cwd-spawn;ssh;$1\0007"
+
+    case $TERM in
+    screen*)
+    # pass through to parent terminal emulator
+        update="\0033P$update\0033\\";;
+    esac
+
+    echo -ne "$update"
+}
+
+urxvt-set-title () {
+    title=$@
+    print -Pn "\e]2;${title}\a"
 }
 
 # get the current git branch
@@ -29,7 +59,7 @@ preexec () {
 	case "$TERM" in
 		screen*)
 			# set tmux' title to the currently running program
-			print -Pn "\033k$1\033\\"
+			#print -Pn "\033k$1\033\\"
 			;;
 		linux)
 			# this is a tty, don't do anything.
@@ -37,13 +67,13 @@ preexec () {
 		*)
 			# set urxvt's title. format:
 			# [user@host pwd] currently_running_program
-			print -Pn "\e]0;[%n@%m %~] $1\a"
+			urxvt-set-title "[%n@%m $PWD] $1 - urxvt"
 			;;
 	esac
 }
 
-precmd () {
-}
+#precmd () {
+#}
 
 
 function zle-keymap-select {
@@ -51,3 +81,5 @@ function zle-keymap-select {
     zle reset-prompt
 }
 zle -N zle-keymap-select
+
+chpwd_functions=(${chpwd_functions} cwd_to_urxvt)
