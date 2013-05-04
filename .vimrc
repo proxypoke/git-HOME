@@ -50,14 +50,15 @@ set formatoptions=tcroqnlj
 set mouse=
 
 " tabs, motherfucker, do you use them?
-set hidden
-nmap <C-t> :tabnew<CR>
-map th :tabfirst<CR>
-map tj :tabnext<CR>
-map tk :tabprevious<CR>
-map tl :tablast<CR>
-map tt :tabedit<Space>
-map tm :tabmove<Space>
+" No.
+"set hidden
+"nmap <C-t> :tabnew<CR>
+"map th :tabfirst<CR>
+"map tj :tabnext<CR>
+"map tk :tabprevious<CR>
+"map tl :tablast<CR>
+"map tt :tabedit<Space>
+"map tm :tabmove<Space>
 
 " various stuff
 nmap <CR> o<Esc>
@@ -68,3 +69,8 @@ set wildignore=*.o,*a,*.py[oc]
 
 " When .vimrc is edited, automatically reload it (stolen from eeemsi)
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" use very magic search
+nnoremap / /\v
+nnoremap ? ?\v
+cnoremap s/ s/\v
