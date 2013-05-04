@@ -27,6 +27,11 @@
 # tmux
 !.tmux.conf
 
+# urxvt
+!.urxvt/
+!.urxvt/cwd-spawn
+!.urxvt/fonts
+
 # vim
 !.vimrc
 !.gvimrc
@@ -44,6 +49,7 @@
 !.xinitrc
 !.xinputrc
 !.Xdefaults
+!.Xresources
 !.Xmodmap
 
 # zsh

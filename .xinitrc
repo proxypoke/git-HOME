@@ -1,3 +1,6 @@
+# merge xrdb
+xrdb -merge "$HOME/.Xresources"
+
 # urxvtd
 urxvtd -q -o -f
 

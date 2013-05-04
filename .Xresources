@@ -1,0 +1,103 @@
+! ================================= [ Perl ] ==================================
+
+URxvt.perl-lib: /home/slowpoke/.urxvt
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,matcher
+URxvt.perl-ext: fonts,urxvi,cwd-spawn
+
+! ================================= [ Fonts ] =================================
+
+urxvt.fonts.0: *-terminus-medium-*-*-*-*-120-*-*-*-*-*-*
+urxvt.fonts.1: *-terminus-medium-*-*-*-*-140-*-*-*-*-*-*
+urxvt.fonts.2: *-terminus-medium-*-*-*-*-160-*-*-*-*-*-*
+urxvt.fonts.3: *-terminus-medium-*-*-*-*-180-*-*-*-*-*-*
+urxvt.fonts.4: *-terminus-medium-*-*-*-*-200-*-*-*-*-*-*
+urxvt.fonts.5: *-terminus-medium-*-*-*-*-220-*-*-*-*-*-*
+urxvt.fonts.6: *-terminus-medium-*-*-*-*-240-*-*-*-*-*-*
+urxvt.fonts.7: *-terminus-medium-*-*-*-*-260-*-*-*-*-*-*
+urxvt.fonts.8: *-terminus-medium-*-*-*-*-280-*-*-*-*-*-*
+urxvt.fonts.9: *-terminus-medium-*-*-*-*-300-*-*-*-*-*-*
+
+! bold = light color
+URxvt.intensityStyles: true
+URxvt.boldFont:
+
+! ================================= [ Colors ] ================================
+
+! Normal
+!                black
+URxvt.color0:    #6C6C6C
+!                red
+URxvt.color1:    #CC0000
+!                green
+URxvt.color2:    #4E9A06
+!                yellow
+URxvt.color3:    #C4A000
+!                blue
+URxvt.color4:    #3465A4
+!                purple
+URxvt.color5:    #75507B
+!                cyan
+URxvt.color6:    #06989A
+!                white
+URxvt.color7:    #F2F2F2
+
+! Light
+!                black
+URxvt.color8:    #555753
+!                red
+URxvt.color9:    #EF2929
+!                green
+URxvt.color10:   #8AE234
+!                yellow
+URxvt.color11:   #FCE94F
+!                blue
+URxvt.color12:   #729FCF
+!                purple
+URxvt.color13:   #AD7FA8
+!                cyan
+URxvt.color14:   #34E2E2
+!                white
+URxvt.color15:   #EEEEEC
+
+! ============================== [ Look & Feel ] ==============================
+
+URxvt.foreground:      lightblue
+URxvt.transparent:     true
+URxvt.shading:         10
+URxvt.fading:          40
+
+URxvt.urgentOnBell:    true
+URxvt.cursorUnderline: false
+URxvt.cursorColor:     #34E2E2
+URxvt.underlineColor:  #34E2E2
+
+! =============================== [ Scrolling ] ===============================
+
+URxvt.scrollBar:         off
+URxvt.saveLines:         8192
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+URxvt.scrollTtyKeypress: true
+
+! ======================== [ Extension configuration ] ========================
+
+! Font switching
+URxvt.keysym.C-equal: perl:fonts:plus
+URxvt.keysym.C-minus: perl:fonts:minus
+
+! urxvi
+URxvt.keysym.F1:    perl:urxvi
+
+! URL selector
+URxvt.url-select.launcher:  /usr/bin/firefox-aurora
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+!URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
+! clickable URLs
+URxvt.url-launcher:     /usr/bin/firefox-aurora
+URxvt.matcher.button:   1
+
+! cwd-spawn
+!URxvt.keysym.C-o: perl:cwd-spawn
