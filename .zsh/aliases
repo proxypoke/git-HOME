@@ -1,7 +1,7 @@
 #general
 alias x='exec nohup startx'
 alias o='xdg-open'
-alias v='vim -p'
+alias v='vim'
 alias e='emacs -nw'
 alias g='git'
 alias t='urxvt -cd $PWD &>/dev/null &; disown'
@@ -12,7 +12,7 @@ alias untar='tar xfv'
 alias ytdl='youtube-dl -t --prefer-free-formats'
 
 # file system usage
-alias fsu="di -f mpf"
+alias fsu="di -f Mpf"
 
 # notmuch
 alias notmuch="mosh shion -- tmux attach -t notmuch"
