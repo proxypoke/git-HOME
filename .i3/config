@@ -20,8 +20,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Shift+Return exec urxvtc
-bindsym $mod+Return exec lilyterm -s
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec lilyterm -s
 
 
 # kill focused window
@@ -173,6 +173,7 @@ bar {
 
 bar {
         output VGA1
+        output HDMI1
         status_command i3status
 		mode dock
 
@@ -196,7 +197,7 @@ focus_follows_mouse no
 # Assignments
 assign [window_role="browser"] → $www
 assign [title="newsbeuter"] → $news
-assign [title="bin/irc"] → $irc
+assign [title="irc"] → $irc
 assign [class="Claws-mail"] → $mail
 
 # back and forth
@@ -224,8 +225,11 @@ bindsym $mod+x move workspace to output right
 # screenlock
 bindcode 160 exec ~/bin/screenlock
 
+# rename workspaces
+bindsym $mod+t exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+
 # autostart
-exec firefox-aurora
-exec lilyterm -e "irc"
-exec lilyterm -e "newsbeuter"
-exec lilyterm -e "notmuch"; move workspace $mail
+exec firefox
+exec urxvt -e "irc"
+exec urxvt -e "newsbeuter"
+exec i3-msg workspace 1
