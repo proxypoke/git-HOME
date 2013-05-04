@@ -1,9 +1,10 @@
-"hg6882
+"hg6904
 
 loadplugins '\.(js|penta)$'
 group user
 map -count -modes=n e <count>:set<Space>noscript-tempsites!=<Tab><Return>
 map -count -modes=n,v E <count>:set<Space>noscript-sites!=<Tab><Return>
 set defsearch=duckduckgo
+set hlfind
 
 " vim: set ft=pentadactyl:
