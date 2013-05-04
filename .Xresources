@@ -63,7 +63,7 @@ URxvt.color15:   #EEEEEC
 
 URxvt.foreground:      lightblue
 URxvt.transparent:     true
-URxvt.shading:         10
+URxvt.shading:         15
 URxvt.fading:          40
 
 URxvt.urgentOnBell:    true
