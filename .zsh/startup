@@ -1,3 +1,6 @@
 # Stuff displayed when the shell starts.
 
 echo "Carpe Chao. Attere dominatum."
+
+urxvt-set-title "[%n@%m $PWD] - urxvt"
+cwd_to_urxvt
