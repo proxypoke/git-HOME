@@ -188,7 +188,7 @@ bar {
 #client.unfocused		#333333	#222222	#00AA00 #00FF00
 
 # border style
-new_window pixel 2
+new_window pixel 0
 hide_edge_borders both
 
 # Mouse
