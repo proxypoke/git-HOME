@@ -15,7 +15,7 @@ alias ytdl='youtube-dl -t --prefer-free-formats'
 alias fsu="di -f Mpf"
 
 # notmuch
-alias notmuch="mosh shion -- tmux attach -t notmuch"
+alias notmuch="mosh shion -- ~/bin/start-notmuch"
 
 # ls
 alias l='ll'
