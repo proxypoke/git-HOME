@@ -21,7 +21,6 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec lilyterm -s
 
 
 # kill focused window
@@ -214,6 +213,7 @@ bindsym $mod+i exec i3-input
 bindsym $mod+b exec /usr/bin/quickswitch.py
 bindsym $mod+Shift+B exec "/usr/bin/quickswitch.py -s"
 bindsym $mod+Shift+W exec "/usr/bin/quickswitch.py -w"
+bindsym $mod+Shift+Return exec "/usr/bin/quickswitch.py -e"
 
 # scratchpad
 bindsym $mod+minus move scratchpad
