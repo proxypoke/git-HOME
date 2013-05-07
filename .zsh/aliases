@@ -10,6 +10,7 @@ alias s='sudo'
 alias sv='sudo -e'
 alias untar='tar xfv'
 alias ytdl='youtube-dl -t --prefer-free-formats'
+alias sm='sm -f green -b black -n orbitron'
 
 # file system usage
 alias fsu="di -f Mpf"
