@@ -74,3 +74,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 nnoremap / /\v
 nnoremap ? ?\v
 cnoremap s/ s/\v
+
+" overwrite read-only with sudo
+cmap w!! %!sudo tee > /dev/null %
