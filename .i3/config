@@ -221,6 +221,7 @@ bindsym $mod+plus scratchpad show
 
 # output switching
 bindsym $mod+x move workspace to output right
+bindsym $mod+Shift+x move workspace to output up
 
 # screenlock
 bindcode 160 exec ~/bin/screenlock
