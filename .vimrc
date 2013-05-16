@@ -16,7 +16,7 @@ syntax on
 colorscheme kosmos
 set cursorline
 "set cursorcolumn
-set relativenumber
+set relativenumber  " ha ha ha, time to fuck with people.
 set hlsearch
 
 " ScreenShell settings
@@ -51,7 +51,6 @@ set mouse=
 
 " tabs, motherfucker, do you use them?
 " No.
-"set hidden
 "nmap <C-t> :tabnew<CR>
 "map th :tabfirst<CR>
 "map tj :tabnext<CR>
@@ -77,3 +76,6 @@ cnoremap s/ s/\v
 
 " overwrite read-only with sudo
 cmap w!! %!sudo tee > /dev/null %
+
+" hidden buffers
+set hidden
