@@ -18,6 +18,8 @@ set cursorline
 "set cursorcolumn
 set relativenumber  " ha ha ha, time to fuck with people.
 set hlsearch
+" always keep at least 5 lines over/under the cursor while scrolling
+set scrolloff=5
 
 " ScreenShell settings
 let g:ScreenShellExternal=1
