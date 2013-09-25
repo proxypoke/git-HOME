@@ -1,1 +1,1 @@
-feh  --image-bg black --bg-center '/home/slowpoke/.i3/bg.png' 
+feh  --image-bg black --bg-center '/home/slowpoke/.i3/bg.png' ~/.i3/altbg.png --no-fehbg
