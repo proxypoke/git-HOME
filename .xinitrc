@@ -1,6 +1,9 @@
 # merge xrdb
 xrdb -merge "$HOME/.Xresources"
 
+# set keyboard layout
+setxkbmap us dvp
+
 # urxvtd
 urxvtd -q -o -f
 
