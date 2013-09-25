@@ -214,6 +214,7 @@ bindsym $mod+b exec /usr/bin/quickswitch.py
 bindsym $mod+Shift+B exec "/usr/bin/quickswitch.py -s"
 bindsym $mod+Shift+W exec "/usr/bin/quickswitch.py -w"
 bindsym $mod+Shift+Return exec "/usr/bin/quickswitch.py -e"
+bindsym $mod+m exec "/usr/bin/quickswitch.py -m"
 
 # scratchpad
 bindsym $mod+minus move scratchpad
@@ -230,7 +231,10 @@ bindcode 160 exec ~/bin/screenlock
 bindsym $mod+t exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # autostart
-exec firefox
+exec firefox-aurora
 exec urxvt -e "irc"
 exec urxvt -e "newsbeuter"
 exec i3-msg workspace 1
+
+# oh pygame, you so crazy
+for_window [title="pygame window"] floating enable
