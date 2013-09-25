@@ -11,6 +11,15 @@ alias sv='sudo -e'
 alias untar='tar xfv'
 alias ytdl='youtube-dl -t --prefer-free-formats'
 alias sm='sm -f green -b black -n orbitron'
+alias mkcd='mkdir_and_cd'
+alias m="more"
+
+# kbd
+alias asdf='setxkbmap lv dvorakprogr; xmodmap ~/.Xmodmap'
+alias aoeu='setxkbmap us; xmodmap ~/.Xmodmap'
+
+# openrc
+alias rcs="sudo rc-service"
 
 # file system usage
 alias fsu="di -f Mpf"
@@ -32,7 +41,7 @@ alias cp='rsync -azq'
 alias grep='grep --color'
 alias krebs='grep' # lol RZL
 alias ack="/usr/bin/vendor_perl/ack"
-alias gr='grep'
+alias gr='grep -i'
 
 # mount
 alias mnt='mount'

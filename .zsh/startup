@@ -1,6 +1,17 @@
 # Stuff displayed when the shell starts.
 
-echo "Carpe Chao. Attere dominatum."
+echo "Credo in Chao. Attere dominatum."
 
-urxvt-set-title "[%n@%m $PWD] - urxvt"
-cwd_to_urxvt
+if [[ ! -e "${HOME}/.gpg-agent-info" ]]; then
+    gpg-agent --daemon --enable-ssh-support \
+        --write-env-file "${HOME}/.gpg-agent-info" \
+        --pinentry-program "/usr/bin/pinentry-curses" \
+        --use-standard-socket
+fi
+
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+    source "${HOME}/.gpg-agent-info"
+    export GPG_AGENT_INFO
+    export SSH_AUTH_SOCK
+    export GPG_TTY=$(tty)
+fi

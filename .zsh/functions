@@ -55,6 +55,10 @@ pacman_install_rehash () {
 	rehash
 }
 
+mkdir_and_cd () {
+    mkdir $* && cd $1
+}
+
 preexec () {
 	case "$TERM" in
 		screen*)
