@@ -27,7 +27,8 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -nb "#222222" -sf "#000000" -sb "#00AA00"
+#bindsym $mod+d exec dmenu_run -b -nb "#222222" -sf "#000000" -sb "#00AA00"
+bindsym $mod+d exec shellex
 
 # change focus
 bindsym $mod+h focus left
