@@ -101,3 +101,6 @@ URxvt.matcher.button:   1
 
 ! cwd-spawn
 !URxvt.keysym.C-o: perl:cwd-spawn
+
+URxvt.shellex.edge: bottom
+URxvt.shellex.pos:  focus
